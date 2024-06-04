@@ -15,6 +15,8 @@ namespace Domain.Entities
         public string Description { get; set; } = string.Empty;
         public string UrlMedia { get; set; } = string.Empty;
         public string Precautions { get; set; } = string.Empty;
+        public virtual User? Trainer { get; set; }
+        public string? TrainerId { get; set; } = Guid.NewGuid().ToString();
         public List<TrainingAndWorkoutPlan>? Trainings { get; set; }
     }
 }

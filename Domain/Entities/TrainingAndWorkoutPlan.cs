@@ -14,9 +14,12 @@ namespace Domain.Entities
         public virtual Training? Training { get; set; } = null;
         public string TainingId { get; set; } = string.Empty;  
         public virtual WorkoutPlan? WorkoutPlan { get; set; } = null;
-        public string WorkoutPlanId { get; set; } = string.Empty;  
+        public string WorkoutPlanId { get; set; } = string.Empty;
+        public virtual Discipline? Discipline { get; set; }
+        public string DisciplineId { get; set; } = string.Empty;
         public string Diffilcuty { get; set; } = string.Empty;
         public int Duration { get; set; } = 0;
         public int Repeated { get; set; } = 0;
+
     }
 }

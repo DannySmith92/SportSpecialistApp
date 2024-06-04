@@ -3,17 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{51C4F75F-183B-4FBD-B9CB-CC5C42C00361}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{51C4F75F-183B-4FBD-B9CB-CC5C42C00361}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{7ED9F2B9-7E9A-4B74-B9A7-A293FA179985}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{7ED9F2B9-7E9A-4B74-B9A7-A293FA179985}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{DA8FC35C-A7BE-4D0E-BDC8-5FC7544FE88E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{DA8FC35C-A7BE-4D0E-BDC8-5FC7544FE88E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{B923A913-6145-4D81-824F-C3B713A74858}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{B923A913-6145-4D81-824F-C3B713A74858}"
+	ProjectSection(ProjectDependencies) = postProject
+		{13190343-A392-4560-877E-0E827585CE19} = {13190343-A392-4560-877E-0E827585CE19}
+		{44D4D365-D36D-43DD-9352-258DA9151020} = {44D4D365-D36D-43DD-9352-258DA9151020}
+		{7ED9F2B9-7E9A-4B74-B9A7-A293FA179985} = {7ED9F2B9-7E9A-4B74-B9A7-A293FA179985}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{13190343-A392-4560-877E-0E827585CE19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{13190343-A392-4560-877E-0E827585CE19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAdmin", "WebAdmin\WebAdmin.csproj", "{44D4D365-D36D-43DD-9352-258DA9151020}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAdmin", "WebAdmin\WebAdmin.csproj", "{44D4D365-D36D-43DD-9352-258DA9151020}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

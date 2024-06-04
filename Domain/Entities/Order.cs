@@ -19,6 +19,7 @@ namespace Domain.Entities
         public string? Note { get; set; }
         public decimal TotalPrice { get; set; } = 0;
         public decimal Discount { get; set; } = 0;
+        public string OrderStatus { get; set; } = string.Empty;
         public DateTime OrderData { get; set; } = new DateTime();
         public virtual User User { get; set; } = null!;
         public string UserId { get; set; } = null!;

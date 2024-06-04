@@ -60,6 +60,10 @@ namespace Domain.Entities
         public string? TaxCode { get; set; } = string.Empty;
         public DateTime? Born { get; set; } = DateTime.UtcNow;
         public string? Citizenship { get; set; } = string.Empty;
+        public virtual Discipline? Discipline { get; set; }
+        public string? DisciplineId {  get; set; } = string.Empty;
+        public List<Review>? Review { get; set; }
+        public List<PackagePlanAndUser>? PackagePlanAndUser { get; set; }
 
     }
 }
