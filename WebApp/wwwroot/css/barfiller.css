@@ -1,6 +1,5 @@
 body {
     font-family: Arial;
-    background:#eee;
 }
 
 .barfiller {
@@ -33,7 +32,7 @@ body {
     font-size:11px;
     color:#fff;
     left:0px;
-    position:absolute;
+    position: relative;;
     z-index:2;
     background: #333;
 } 

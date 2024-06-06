@@ -1,20 +1,22 @@
-/* =================================
-------------------------------------
-  TopGym | Fitness HTML Template
+/*  ---------------------------------------------------
+  Template Name: Gym
+  Description:  Gym Fitness HTML Template
+  Author: Colorlib
+  Author URI: https://colorlib.com
   Version: 1.0
- ------------------------------------
- ====================================*/
+  Created: Colorlib
+---------------------------------------------------------  */
 
 'use strict';
 
 (function ($) {
-    
+
     /*------------------
         Preloader
     --------------------*/
     $(window).on('load', function () {
         $(".loader").fadeOut();
-        $("#preloder").delay(400).fadeOut("slow");
+        $("#preloder").delay(200).fadeOut("slow");
     });
 
     /*------------------
@@ -25,144 +27,148 @@
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
+    //Canvas Menu
+    $(".canvas-open").on('click', function () {
+        $(".offcanvas-menu-wrapper").addClass("show-offcanvas-menu-wrapper");
+        $(".offcanvas-menu-overlay").addClass("active");
+    });
+
+    $(".canvas-close, .offcanvas-menu-overlay").on('click', function () {
+        $(".offcanvas-menu-wrapper").removeClass("show-offcanvas-menu-wrapper");
+        $(".offcanvas-menu-overlay").removeClass("active");
+    });
+
+    // Search model
+    $('.search-switch').on('click', function () {
+        $('.search-model').fadeIn(400);
+    });
+
+    $('.search-close-switch').on('click', function () {
+        $('.search-model').fadeOut(400, function () {
+            $('#search-input').val('');
+        });
+    });
+
+    //Masonary
+    $('.gallery').masonry({
+        itemSelector: '.gs-item',
+        columnWidth: '.grid-sizer',
+        gutter: 10
+    });
+
     /*------------------
 		Navigation
 	--------------------*/
-	$(".mobile-menu").slicknav({
+    $(".mobile-menu").slicknav({
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
 
     /*------------------
-		Search Bar Wrap
-	--------------------*/
-    $(".search-trigger").on('click', function() {
-        $(".search-bar-wrap").addClass("active");
-    });              
-
-
-    $(".search-close").on('click', function() {
-        $(".search-bar-wrap").removeClass("active");
-    });
-
-
-    /*------------------
-        Hero Slider
+        Carousel Slider
     --------------------*/
-    var hero_s = $(".slide-items");
+    var hero_s = $(".hs-slider");
     hero_s.owlCarousel({
         loop: true,
         margin: 0,
-        nav: false,
+        nav: true,
         items: 1,
-        dots: true,
-		mouseDrag: false,
+        dots: false,
         animateOut: 'fadeOut',
-    	animateIn: 'fadeIn',
-        navText: ['<i class="flaticon-left-arrow-1"></i>', '<i class="flaticon-right-arrow-1"></i>'],
+        animateIn: 'fadeIn',
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        smartSpeed: 1200,
+        autoHeight: false,
+        autoplay: false
+    });
+
+    /*------------------
+        Team Slider
+    --------------------*/
+    $(".ts-slider").owlCarousel({
+        loop: true,
+        margin: 0,
+        items: 3,
+        dots: true,
+        dotsEach: 2,
         smartSpeed: 1200,
         autoHeight: false,
         autoplay: true,
-        onInitialized: function() {
-        	var a = this.items().length;
-            $("#snh-1").html("<span>1</span><span>" + a + "</span>");
+        responsive: {
+            320: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            },
+            992: {
+                items: 3,
+            }
         }
     });
 
     /*------------------
-        Magnific Popup
+        Testimonial Slider
     --------------------*/
-        $('.pop-up').magnificPopup({
-            type: 'iframe'
-        });
-
-    /*------------------
-        About Counter Up
-    --------------------*/
-    $('.counter').each(function () {
-        $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
-        }, {
-            duration: 4000,
-            easing: 'swing',
-            step: function (now) {
-            $(this).text(Math.ceil(now));
-            }
-        });
+    $(".ts_slider").owlCarousel({
+        loop: true,
+        margin: 0,
+        items: 1,
+        dots: false,
+        nav: true,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        smartSpeed: 1200,
+        autoHeight: false,
+        autoplay: true
     });
 
     /*------------------
-        Elements Counter UP
+        Image Popup
     --------------------*/
-    $('.m-counter').each(function () {
-        $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
-        }, {
-            duration: 4000,
-            easing: 'swing',
-            step: function (now) {
-            $(this).text(Math.ceil(now));
-            }
-        });
+    $('.image-popup').magnificPopup({
+        type: 'image'
+    });
+
+    /*------------------
+        Video Popup
+    --------------------*/
+    $('.video-popup').magnificPopup({
+        type: 'iframe'
     });
 
     /*------------------
         Barfiller
     --------------------*/
     $('#bar1').barfiller({
-        barColor: '#233EDE',
+        barColor: '#ffffff',
         duration: 2000
     });
     $('#bar2').barfiller({
-        barColor: '#233EDE',
+        barColor: '#ffffff',
         duration: 2000
     });
     $('#bar3').barfiller({
-        barColor: '#233EDE',
+        barColor: '#ffffff',
         duration: 2000
     });
 
-    /*------------------
-        Accordin Active
-    --------------------*/
-    $('.collapse').on('shown.bs.collapse', function () {
-        $(this).prev().addClass('active');
+    $('.table-controls ul li').on('click', function () {
+        var tsfilter = $(this).data('tsfilter');
+        $('.table-controls ul li').removeClass('active');
+        $(this).addClass('active');
+
+        if (tsfilter == 'all') {
+            $('.class-timetable').removeClass('filtering');
+            $('.ts-meta').removeClass('show');
+        } else {
+            $('.class-timetable').addClass('filtering');
+        }
+        $('.ts-meta').each(function () {
+            $(this).removeClass('show');
+            if ($(this).data('tsmeta') == tsfilter) {
+                $(this).addClass('show');
+            }
+        });
     });
-
-    $('.collapse').on('hidden.bs.collapse', function () {
-        $(this).prev().removeClass('active');
-    });
-
-    /*------------------
-        Progress Loader
-    --------------------*/
-	$('.circle-progress').each(function() {
-		var cpvalue = $(this).data("cpvalue");
-		var cpcolor = $(this).data("cpcolor");
-		var cpid 	= $(this).data("cpid");
-
-		$(this).append('<div class="'+ cpid +'"></div><div class="progress-value"><span class="loader-percentage">'+ cpvalue +'%</span></div>');
-
-		if (cpvalue < 100) {
-
-			$('.' + cpid).circleProgress({
-				value: '0.' + cpvalue,
-				size: 174,
-				thickness: 16,
-				fill: cpcolor,
-				emptyFill: "rgba(0, 0, 0, 0)"
-			});
-		} else {
-			$('.' + cpid).circleProgress({
-				value: 1,
-				size: 174,
-				thickness: 16,
-				fill: cpcolor,
-				emptyFill: "rgba(0, 0, 0, 0)"
-			});
-		}
-
-	});
-
 
 })(jQuery);
