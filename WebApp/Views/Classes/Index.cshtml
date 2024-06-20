@@ -1,4 +1,9 @@
-﻿
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
 @{
     ViewData["Title"] = "Classes";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,16 +14,16 @@
     <div class="loader"></div>
 </div>
 <!-- Breadcrumb Section Begin -->
-<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb-bg.jpg">
+<section class="breadcrumb-section set-bg" data-setbg="/img/breadcrumb-bg.jpg">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="breadcrumb-text">
-                    <h2>Classes detail</h2>
+                    <h2>Dettagli delle lezioni</h2>
                     <div class="bt-option">
                         <a href="./index.html">Home</a>
-                        <a href="#">Classes</a>
-                        <span>Body building</span>
+                        <a href="#">Lezioni</a>
+                        <span>Body Building</span>
                     </div>
                 </div>
             </div>
@@ -33,28 +38,19 @@
             <div class="col-lg-8">
                 <div class="class-details-text">
                     <div class="cd-pic">
-                        <img src="img/classes/class-details/class-detailsl.jpg" alt="">
+                        <img src="/img/classes/class-details/class-detailsl.jpg" alt="">
                     </div>
                     <div class="cd-text">
                         <div class="cd-single-item">
-                            <h3>Body buiding</h3>
+                            <h3>Body Building</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                irure Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua accusantium doloremque
-                                laudantium. Excepteur sint occaecat cupidatat non proident sculpa.
+                                Il Body Building è un'attività che mira a sviluppare la massa muscolare attraverso esercizi specifici e una dieta equilibrata. I nostri corsi sono progettati per aiutarti a raggiungere i tuoi obiettivi di forza e definizione muscolare in modo sicuro ed efficace.
                             </p>
                         </div>
                         <div class="cd-single-item">
-                            <h3>Trainer</h3>
+                            <h3>Allenatore</h3>
                             <p>
-                                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur officia
-                                deserunt mollit.
+                                Il nostro allenatore esperto ti guiderà attraverso un programma personalizzato, fornendoti consigli tecnici e motivazionali per massimizzare i tuoi progressi. La sua competenza e la sua dedizione ti garantiranno un'esperienza di allenamento ottimale.
                             </p>
                         </div>
                     </div>
@@ -62,37 +58,33 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="cd-trainer-pic">
-                                    <img src="img/classes/class-details/trainer-profile.jpg" alt="">
+                                    <img src="/img/classes/class-details/trainer-profile.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="cd-trainer-text">
                                     <div class="trainer-title">
-                                        <h4>Athart Rachel</h4>
-                                        <span>Gym Trainer</span>
+                                        <h4>Federico Cordoba</h4>
+                                        <span>Istrutture FIPE IV Livello</span>
                                     </div>
                                     <div class="trainer-social">
                                         <a href="#"><i class="fa fa-facebook"></i></a>
                                         <a href="#"><i class="fa fa-twitter"></i></a>
                                         <a href="#"><i class="fa fa-youtube-play"></i></a>
                                         <a href="#"><i class="fa fa-instagram"></i></a>
-                                        <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                                        <a href="#"><i class="fa fa-envelope-o"></i></a>
                                     </div>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua viverra maecenas lacus
-                                        vel facilisis.
+                                        Mario ha oltre 10 anni di esperienza nel Body Building e ha aiutato numerosi clienti a raggiungere i loro obiettivi di fitness. La sua filosofia di allenamento si basa su dedizione, tecnica e motivazione.
                                     </p>
                                     <ul class="trainer-info">
-                                        <li><span>Age</span>35</li>
-                                        <li><span>Weight</span>148lbs</li>
-                                        <li><span>Height</span>10' 2``</li>
-                                        <li><span>Occupation</span>no-founder</li>
+                                        <li><span>Età</span>45</li>
+                                        <li><span>Peso</span>85 kg</li>
+                                        <li><span>Altezza</span>1.85 m</li>
+                                        <li><span>Occupazione</span>Co-fondatore</li>
                                     </ul>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua viverra maecenas lacus
-                                        vel facilisis.
+                                        Federico è appassionato di fitness e dedica il suo tempo libero a studiare nuove tecniche di allenamento e nutrizione per offrire il meglio ai suoi clienti.
                                     </p>
                                 </div>
                             </div>
@@ -103,65 +95,65 @@
             <div class="col-lg-4 col-md-8">
                 <div class="sidebar-option">
                     <div class="so-categories">
-                        <h5 class="title">Categories</h5>
+                        <h5 class="title">Categorie</h5>
                         <ul>
                             <li><a href="#">Yoga <span>12</span></a></li>
-                            <li><a href="#">Runing <span>32</span></a></li>
-                            <li><a href="#">Weightloss <span>86</span></a></li>
-                            <li><a href="#">Cario <span>25</span></a></li>
-                            <li><a href="#">Body buiding <span>36</span></a></li>
-                            <li><a href="#">Nutrition <span>15</span></a></li>
+                            <li><a href="#">Running <span>32</span></a></li>
+                            <li><a href="#">Dimagrimento <span>86</span></a></li>
+                            <li><a href="#">Cardio <span>25</span></a></li>
+                            <li><a href="#">Body Building <span>36</span></a></li>
+                            <li><a href="#">Nutrizione <span>15</span></a></li>
                         </ul>
                     </div>
                     <div class="so-latest">
-                        <h5 class="title">Latest posts</h5>
-                        <div class="latest-large set-bg" data-setbg="img/letest-blog/latest-1.jpg">
+                        <h5 class="title">Ultimi post</h5>
+                        <div class="latest-large set-bg" data-setbg="/img/letest-blog/latest-1.jpg">
                             <div class="ll-text">
-                                <h5><a href="#">This Japanese Way of Making Iced Coffee Is a Game...</a></h5>
+                                <h5><a href="#">Questo metodo giapponese per fare il caffè freddo è una rivoluzione...</a></h5>
                                 <ul>
-                                    <li>Aug 20, 2019</li>
-                                    <li>20 Comment</li>
+                                    <li>20 Ago, 2019</li>
+                                    <li>20 Commenti</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="latest-item">
                             <div class="li-pic">
-                                <img src="img/letest-blog/latest-2.jpg" alt="">
+                                <img src="/img/letest-blog/latest-2.jpg" alt="">
                             </div>
                             <div class="li-text">
-                                <h6><a href="#">Grilled Potato and Green Bean Salad</a></h6>
-                                <span class="li-time">Aug 15, 2019</span>
+                                <h6><a href="#">Insalata di patate grigliate e fagiolini</a></h6>
+                                <span class="li-time">15 Ago, 2019</span>
                             </div>
                         </div>
                         <div class="latest-item">
                             <div class="li-pic">
-                                <img src="img/letest-blog/latest-3.jpg" alt="">
+                                <img src="/img/letest-blog/latest-3.jpg" alt="">
                             </div>
                             <div class="li-text">
-                                <h6><a href="#">The $8 French Rosé I Buy in Bulk Every Summer</a></h6>
-                                <span class="li-time">Aug 15, 2019</span>
+                                <h6><a href="#">Il rosé francese da 8 € che compro in quantità ogni estate</a></h6>
+                                <span class="li-time">15 Ago, 2019</span>
                             </div>
                         </div>
                         <div class="latest-item">
                             <div class="li-pic">
-                                <img src="img/letest-blog/latest-4.jpg" alt="">
+                                <img src="/img/letest-blog/latest-4.jpg" alt="">
                             </div>
                             <div class="li-text">
-                                <h6><a href="#">Ina Garten's Skillet-Roasted Lemon Chicken</a></h6>
-                                <span class="li-time">Aug 15, 2019</span>
+                                <h6><a href="#">Pollo al limone arrosto in padella di Ina Garten</a></h6>
+                                <span class="li-time">15 Ago, 2019</span>
                             </div>
                         </div>
                         <div class="latest-item">
                             <div class="li-pic">
-                                <img src="img/letest-blog/latest-5.jpg" alt="">
+                                <img src="/img/letest-blog/latest-5.jpg" alt="">
                             </div>
                             <div class="li-text">
-                                <h6><a href="#">The Best Weeknight Baked Potatoes, 3 Creative Ways</a></h6>
-                                <span class="li-time">Aug 15, 2019</span>
+                                <h6><a href="#">Le migliori patate al forno per le serate infrasettimanali, 3 modi creativi</a></h6>
+                                <span class="li-time">15 Ago, 2019</span>
                             </div>
                         </div>
                     </div>
-                    <div class="so-banner set-bg" data-setbg="img/sidebar-banner.jpg">
+                    <div class="so-banner set-bg" data-setbg="/img/sidebar-banner.jpg">
                         <h5>Banner 300x300</h5>
                     </div>
                 </div>
@@ -176,7 +168,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="class-details-timetable_title">
-                    <h5>Classes timetable</h5>
+                    <h5>Orari delle lezioni</h5>
                 </div>
             </div>
         </div>
@@ -187,20 +179,20 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>Monday</th>
-                                <th>Tuesday</th>
-                                <th>Wednesday</th>
-                                <th>Thursday</th>
-                                <th>Friday</th>
-                                <th>Saturday</th>
-                                <th>Sunday</th>
+                                <th>Lunedì</th>
+                                <th>Martedì</th>
+                                <th>Mercoledì</th>
+                                <th>Giovedì</th>
+                                <th>Venerdì</th>
+                                <th>Sabato</th>
+                                <th>Domenica</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td class="class-time">6.00am - 8.00am</td>
                                 <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
-                                    <h5>WEIGHT LOOSE</h5>
+                                    <h5>Dimagrimento</h5>
                                     <span>RLefew D. Loee</span>
                                 </td>
                                 <td class="hover-dp ts-meta" data-tsmeta="fitness">
@@ -217,7 +209,7 @@
                                 </td>
                                 <td class="dark-bg blank-td"></td>
                                 <td class="hover-dp ts-meta" data-tsmeta="motivation">
-                                    <h5>Boxing</h5>
+                                    <h5>Boxe</h5>
                                     <span>Rachel Adam</span>
                                 </td>
                                 <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
@@ -233,7 +225,7 @@
                                     <span>Kimberly Stone</span>
                                 </td>
                                 <td class="hover-dp ts-meta" data-tsmeta="workout">
-                                    <h5>WEIGHT LOOSE</h5>
+                                    <h5>Dimagrimento</h5>
                                     <span>RLefew D. Loee</span>
                                 </td>
                                 <td class="dark-bg hover-dp ts-meta" data-tsmeta="motivation">
@@ -253,7 +245,7 @@
                             <tr>
                                 <td class="class-time">5.00pm - 7.00pm</td>
                                 <td class="dark-bg hover-dp ts-meta" data-tsmeta="fitness">
-                                    <h5>Boxing</h5>
+                                    <h5>Boxe</h5>
                                     <span>Rachel Adam</span>
                                 </td>
                                 <td class="hover-dp ts-meta" data-tsmeta="motivation">
@@ -286,7 +278,7 @@
                                 </td>
                                 <td class="dark-bg blank-td"></td>
                                 <td class="hover-dp ts-meta" data-tsmeta="fitness">
-                                    <h5>Boxing</h5>
+                                    <h5>Boxe</h5>
                                     <span>Rachel Adam</span>
                                 </td>
                                 <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
@@ -298,11 +290,11 @@
                                     <span>Donald Grey</span>
                                 </td>
                                 <td class="dark-bg hover-dp ts-meta" data-tsmeta="fitness">
-                                    <h5>Boxing</h5>
+                                    <h5>Boxe</h5>
                                     <span>Rachel Adam</span>
                                 </td>
                                 <td class="hover-dp ts-meta" data-tsmeta="workout">
-                                    <h5>WEIGHT LOOSE</h5>
+                                    <h5>Dimagrimento</h5>
                                     <span>RLefew D. Loee</span>
                                 </td>
                             </tr>
@@ -321,22 +313,22 @@
             <div class="col-md-4">
                 <div class="gt-text">
                     <i class="fa fa-map-marker"></i>
-                    <p>333 Middle Winchendon Rd, Rindge,<br /> NH 03461</p>
+                    <p>Via dei Filippini 8, Roma,<br /> RM 00186</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="gt-text">
                     <i class="fa fa-mobile"></i>
                     <ul>
-                        <li>125-711-811</li>
-                        <li>125-668-886</li>
+                        <li>389 913 6915</li>
+                        <li>351 815 4523</li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="gt-text email">
                     <i class="fa fa-envelope"></i>
-                    <p>Support.gymcenter@gmail.com</p>
+                    <p>sport.specialist.pt@gmail.com</p>
                 </div>
             </div>
         </div>
